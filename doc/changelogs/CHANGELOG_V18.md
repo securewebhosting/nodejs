@@ -8,6 +8,7 @@
 </tr>
 <tr>
 <td>
+<a href="#18.2.0">18.2.0</a><br/>
 <a href="#18.1.0">18.1.0</a><br/>
 <a href="#18.0.0">18.0.0</a><br/>
 </td>
@@ -33,6 +34,67 @@
   * [0.10.x](CHANGELOG_V010.md)
   * [io.js](CHANGELOG_IOJS.md)
   * [Archive](CHANGELOG_ARCHIVE.md)
+
+<a id="18.2.0"></a>
+
+## 2022-05-11, Version 18.2.0 (Current), @BethGriggs prepared by @RafaelGSS
+
+### Notable Changes
+
+* \[[`13c333e533`](https://github.com/nodejs/node/commit/13c333e533)] - _**Revert**_ "**deps**: add template for generated headers" (Daniel Bevenius) [#42978](https://github.com/nodejs/node/pull/42978)
+* \[[`2df1624f80`](https://github.com/nodejs/node/commit/2df1624f80)] - **deps**: upgrade npm to 8.9.0 (npm team) [#42968](https://github.com/nodejs/node/pull/42968)
+* \[[`784d84cf34`](https://github.com/nodejs/node/commit/784d84cf34)] - **(SEMVER-MINOR)** **fs**: add `read(buffer[, options])` versions (Livia Medeiros) [#42768](https://github.com/nodejs/node/pull/42768)
+* \[[`2f192c4be0`](https://github.com/nodejs/node/commit/2f192c4be0)] - **(SEMVER-MINOR)** **http**: added connection closing methods (Shogun) [#42812](https://github.com/nodejs/node/pull/42812)
+
+### Commits
+
+* \[[`7cac7bb806`](https://github.com/nodejs/node/commit/7cac7bb806)] - **assert**: fix CallTracker wraps the function causes the length to be lost (OneNail) [#42909](https://github.com/nodejs/node/pull/42909)
+* \[[`e74a8da287`](https://github.com/nodejs/node/commit/e74a8da287)] - **assert**: make `assert.fail` less affected by prototype tampering (Antoine du Hamel) [#42918](https://github.com/nodejs/node/pull/42918)
+* \[[`1146806673`](https://github.com/nodejs/node/commit/1146806673)] - **bootstrap**: stop delaying instantiation of maps in per-context scripts (Darshan Sen) [#42934](https://github.com/nodejs/node/pull/42934)
+* \[[`a20310d171`](https://github.com/nodejs/node/commit/a20310d171)] - **bootstrap**: use a context snapshotted with primordials in workers (Joyee Cheung) [#42867](https://github.com/nodejs/node/pull/42867)
+* \[[`9ee7d9eb15`](https://github.com/nodejs/node/commit/9ee7d9eb15)] - **bootstrap**: fix wasm\_web\_api external reference registration (Joyee Cheung) [#42903](https://github.com/nodejs/node/pull/42903)
+* \[[`0eb32ed976`](https://github.com/nodejs/node/commit/0eb32ed976)] - **build**: fix various shared library build issues (William Marlow) [#41850](https://github.com/nodejs/node/pull/41850)
+* \[[`48f4a714b2`](https://github.com/nodejs/node/commit/48f4a714b2)] - **build**: fix indeterminacy of icu\_locales value (Sergey Nazaryev) [#42865](https://github.com/nodejs/node/pull/42865)
+* \[[`19c060fd84`](https://github.com/nodejs/node/commit/19c060fd84)] - **crypto**: adjust minimum length in generateKey('hmac', ...) (Livia Medeiros) [#42944](https://github.com/nodejs/node/pull/42944)
+* \[[`183bcc0699`](https://github.com/nodejs/node/commit/183bcc0699)] - **crypto**: clean up parameter validation in HKDF (Tobias Nießen) [#42924](https://github.com/nodejs/node/pull/42924)
+* \[[`946f57c7bc`](https://github.com/nodejs/node/commit/946f57c7bc)] - **debugger**: fix inconsistent inspector output of exec new Map() (Kohei Ueno) [#42423](https://github.com/nodejs/node/pull/42423)
+* \[[`e8121ae7fe`](https://github.com/nodejs/node/commit/e8121ae7fe)] - **deps**: regenerate OpenSSL archs files (Daniel Bevenius) [#42978](https://github.com/nodejs/node/pull/42978)
+* \[[`13c333e533`](https://github.com/nodejs/node/commit/13c333e533)] - _**Revert**_ "**deps**: add template for generated headers" (Daniel Bevenius) [#42978](https://github.com/nodejs/node/pull/42978)
+* \[[`2df1624f80`](https://github.com/nodejs/node/commit/2df1624f80)] - **deps**: upgrade npm to 8.9.0 (npm team) [#42968](https://github.com/nodejs/node/pull/42968)
+* \[[`686c4c1f6f`](https://github.com/nodejs/node/commit/686c4c1f6f)] - **doc**: add release key for Juan Arboleda (Juan José) [#42961](https://github.com/nodejs/node/pull/42961)
+* \[[`64e0aa116d`](https://github.com/nodejs/node/commit/64e0aa116d)] - **doc**: rename N-API to Node-API in test/README.md (Daeyeon Jeong) [#42946](https://github.com/nodejs/node/pull/42946)
+* \[[`65d64553c0`](https://github.com/nodejs/node/commit/65d64553c0)] - **doc**: use serial comma in tls docs (Tobias Nießen) [#43001](https://github.com/nodejs/node/pull/43001)
+* \[[`840e61e745`](https://github.com/nodejs/node/commit/840e61e745)] - **doc**: improve commit message example for releases (Juan José) [#42954](https://github.com/nodejs/node/pull/42954)
+* \[[`ba3ad7c665`](https://github.com/nodejs/node/commit/ba3ad7c665)] - **doc**: use serial comma in cluster docs (Tobias Nießen) [#42989](https://github.com/nodejs/node/pull/42989)
+* \[[`3ab3086008`](https://github.com/nodejs/node/commit/3ab3086008)] - **doc**: fix errors in Web Streams doc (OneNail) [#42862](https://github.com/nodejs/node/pull/42862)
+* \[[`1fbfee2497`](https://github.com/nodejs/node/commit/1fbfee2497)] - **doc**: fix examples in cluster.md (OneNail) [#42889](https://github.com/nodejs/node/pull/42889)
+* \[[`1237c742f4`](https://github.com/nodejs/node/commit/1237c742f4)] - **doc**: add additional step to security release process (Michael Dawson) [#42916](https://github.com/nodejs/node/pull/42916)
+* \[[`88692d8fd6`](https://github.com/nodejs/node/commit/88692d8fd6)] - **doc**: add section regarding property definition in `primordials.md` (Antoine du Hamel) [#42921](https://github.com/nodejs/node/pull/42921)
+* \[[`924670f3af`](https://github.com/nodejs/node/commit/924670f3af)] - **doc**: clarify some default values in `fs.md` (Livia Medeiros) [#42892](https://github.com/nodejs/node/pull/42892)
+* \[[`784d84cf34`](https://github.com/nodejs/node/commit/784d84cf34)] - **(SEMVER-MINOR)** **fs**: add `read(buffer[, options])` versions (Livia Medeiros) [#42768](https://github.com/nodejs/node/pull/42768)
+* \[[`2f192c4be0`](https://github.com/nodejs/node/commit/2f192c4be0)] - **(SEMVER-MINOR)** **http**: added connection closing methods (Shogun) [#42812](https://github.com/nodejs/node/pull/42812)
+* \[[`bfbf965eb0`](https://github.com/nodejs/node/commit/bfbf965eb0)] - **http2**: compat support for array headers (OneNail) [#42901](https://github.com/nodejs/node/pull/42901)
+* \[[`46a44b3011`](https://github.com/nodejs/node/commit/46a44b3011)] - **lib**: move WebAssembly Web API into separate file (Tobias Nießen) [#42993](https://github.com/nodejs/node/pull/42993)
+* \[[`c64b8d3282`](https://github.com/nodejs/node/commit/c64b8d3282)] - **lib,test**: enable wasm/webapi/empty-body WPT (Tobias Nießen) [#42960](https://github.com/nodejs/node/pull/42960)
+* \[[`16df8ad7c3`](https://github.com/nodejs/node/commit/16df8ad7c3)] - **meta**: update AUTHORS (Node.js GitHub Bot) [#43004](https://github.com/nodejs/node/pull/43004)
+* \[[`0ec32d0715`](https://github.com/nodejs/node/commit/0ec32d0715)] - **meta**: move one or more collaborators to emeritus (Node.js GitHub Bot) [#42937](https://github.com/nodejs/node/pull/42937)
+* \[[`5dc79298e1`](https://github.com/nodejs/node/commit/5dc79298e1)] - **src**: remove unnecessary comment (Kohei Ueno) [#42952](https://github.com/nodejs/node/pull/42952)
+* \[[`38e4c15534`](https://github.com/nodejs/node/commit/38e4c15534)] - **src**: always signal V8 for intercepted properties (Michaël Zasso) [#42963](https://github.com/nodejs/node/pull/42963)
+* \[[`cacff07e75`](https://github.com/nodejs/node/commit/cacff07e75)] - **src**: fix memory leak for v8.serialize (liuxingbaoyu) [#42695](https://github.com/nodejs/node/pull/42695)
+* \[[`8cfc18e4db`](https://github.com/nodejs/node/commit/8cfc18e4db)] - **src,crypto**: remove uses of AllocatedBuffer from crypto\_rsa.cc (Darshan Sen) [#42852](https://github.com/nodejs/node/pull/42852)
+* \[[`41d2f6e8c5`](https://github.com/nodejs/node/commit/41d2f6e8c5)] - **test**: rename handlewrap.hasref tests (Daeyeon Jeong) [#42754](https://github.com/nodejs/node/pull/42754)
+* \[[`e058f47277`](https://github.com/nodejs/node/commit/e058f47277)] - **test**: improve observable ICU behaviour coverage (Livia Medeiros) [#42683](https://github.com/nodejs/node/pull/42683)
+* \[[`d23debb4cb`](https://github.com/nodejs/node/commit/d23debb4cb)] - **test**: validate webstream encoder/decoder inspector (Yoshiki Kurihara) [#42747](https://github.com/nodejs/node/pull/42747)
+* \[[`b1c18edaa9`](https://github.com/nodejs/node/commit/b1c18edaa9)] - **test**: use`mustSucceed` instead of `mustCall` with `assert.ifError` (MURAKAMI Masahiko) [#42806](https://github.com/nodejs/node/pull/42806)
+* \[[`2dc795687a`](https://github.com/nodejs/node/commit/2dc795687a)] - **test**: improve `lib/internal/webstreams/readablestream.js` coverage (MURAKAMI Masahiko) [#42823](https://github.com/nodejs/node/pull/42823)
+* \[[`d746207dc2`](https://github.com/nodejs/node/commit/d746207dc2)] - **test**: fix test-crypto-fips.js under shared OpenSSL (Vita Batrla) [#42947](https://github.com/nodejs/node/pull/42947)
+* \[[`56c47b5101`](https://github.com/nodejs/node/commit/56c47b5101)] - **test**: use consistent timeouts (Shogun) [#42893](https://github.com/nodejs/node/pull/42893)
+* \[[`68ed3c88d9`](https://github.com/nodejs/node/commit/68ed3c88d9)] - **test**: add test for position validation in fs.read() and fs.readSync() (Livia Medeiros) [#42837](https://github.com/nodejs/node/pull/42837)
+* \[[`72b90fd5f5`](https://github.com/nodejs/node/commit/72b90fd5f5)] - **test**: reduce impact of flaky HTTP server tests (Tobias Nießen) [#42926](https://github.com/nodejs/node/pull/42926)
+* \[[`64daaca46d`](https://github.com/nodejs/node/commit/64daaca46d)] - **tools**: update eslint to 8.15.0 (Node.js GitHub Bot) [#43005](https://github.com/nodejs/node/pull/43005)
+* \[[`79872382ef`](https://github.com/nodejs/node/commit/79872382ef)] - **tools**: refactor lint-sh.js to esm module (Feng Yu) [#42942](https://github.com/nodejs/node/pull/42942)
+* \[[`265ecdfe07`](https://github.com/nodejs/node/commit/265ecdfe07)] - **tools**: update lint-md-dependencies (Node.js GitHub Bot) [#43003](https://github.com/nodejs/node/pull/43003)
+* \[[`5470578008`](https://github.com/nodejs/node/commit/5470578008)] - **worker**: fix stream racing with terminate (Keyhan Vakil) [#42874](https://github.com/nodejs/node/pull/42874)
 
 <a id="18.1.0"></a>
 

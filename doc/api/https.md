@@ -138,7 +138,7 @@ See [`http.Server.close()`][].
 ### `server.closeAllConnections()`
 
 <!-- YAML
-added: REPLACEME
+added: v18.2.0
 -->
 
 See [`http.Server.closeAllConnections()`][].
@@ -146,7 +146,7 @@ See [`http.Server.closeAllConnections()`][].
 ### `server.closeIdleConnections()`
 
 <!-- YAML
-added: REPLACEME
+added: v18.2.0
 -->
 
 See [`http.Server.closeIdleConnections()`][].
